@@ -1,0 +1,18 @@
+.todo-action-btns {
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+}
+
+.delete-btn {
+    width: 15px;
+    height: 15px;
+    background: url('delete-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.unchecked {
+    text-decoration:line-through;
+}
