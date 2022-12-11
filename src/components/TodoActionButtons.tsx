@@ -7,10 +7,14 @@ const TodoActionButtons = (props: {isChecked: (isChecked: boolean) => void}) => 
     props.isChecked(event.target.checked);
   }
 
+  const deleteTaskHandler = () => {
+    console.log('delete task')
+  }
+
   return (
     <div className="todo-action-btns">
       <input type="checkbox" onChange={checkboxHandler}/>
-      <div className="delete-btn">
+      <div onClick={deleteTaskHandler} className="delete-btn">
       </div>
     </div>
   );

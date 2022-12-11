@@ -2,6 +2,7 @@ import * as React from 'react';
 import { TodoContext } from '../contexts/TodoContext';
 import { TodoContextType } from "../App";
 import Todo from './Todo';
+import "./TodoList.css";
 
 const TodoList = (): JSX.Element => {
 const { todos } = React.useContext(TodoContext) as TodoContextType;

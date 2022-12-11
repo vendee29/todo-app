@@ -4,6 +4,8 @@ import { Task } from '../App';
 import { TodoContext } from '../contexts/TodoContext';
 import { TodoContextType } from "../App";
 
+import "./AddTodo.css";
+
 const AddTodo = (): JSX.Element => {
 
   const { todos, setTodos } = React.useContext(TodoContext) as TodoContextType;
@@ -12,6 +14,8 @@ const AddTodo = (): JSX.Element => {
 
   const submitHandler = (event: any) => {
     event.preventDefault();
+    
+    if(enteredTodo.trim().length === 0) return;
 
     const newTodo: Task = {
       id: Math.random(),
@@ -32,7 +36,7 @@ const AddTodo = (): JSX.Element => {
         <form onSubmit={submitHandler}>
             <label htmlFor="add-todo"></label>
             <input type="text" id="add-todo" value={enteredTodo} onChange={inputHandler}/>
-            <Button text={'Add new task'}></Button>
+            <button className='submit-btn'>Add new task</button>
         </form>
     </div>
   )

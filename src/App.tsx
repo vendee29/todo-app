@@ -35,10 +35,10 @@ const App = () => {
     <div className="App">
       <h1>ToDo App</h1>
       <TodoContext.Provider value={{ todos, setTodos }}>
-        <AddTodo></AddTodo>
-        <TodoList></TodoList>
+        <AddTodo/>
+        <TodoList/>
       </TodoContext.Provider>
-      <DeleteButtons></DeleteButtons>
+      <DeleteButtons/>
     </div>
   );
 };
