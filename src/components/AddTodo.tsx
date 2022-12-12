@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Task } from "../App";
 import { TodoContext } from "../contexts/TodoContext";
-import { TodoContextType } from "../contexts/TodoContext";
+import { TodoContextType, Task } from "../constants/constants";
 
 import "./AddTodo.css";
 

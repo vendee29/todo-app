@@ -1,7 +1,9 @@
 import * as React from "react";
-import { TodoContext, TodoContextType } from "../contexts/TodoContext";
-import { Task } from "../App";
+import { TodoContext } from "../contexts/TodoContext";
+import { TodoContextType, Task } from "../constants/constants";
+import { doesArrContainTask } from "../utils/utils";
 import Todo from "./Todo";
+
 import "./TodoList.css";
 
 interface Props {
@@ -59,9 +61,3 @@ const TodoList = (props: Props): JSX.Element => {
 };
 
 export default TodoList;
-
-const doesArrContainTask = (arr: Task[], task: Task) => {
-  const filtered = arr.filter((todo) => todo.value === task.value);
-  if (filtered.length === 0) return false;
-  return true;
-};
