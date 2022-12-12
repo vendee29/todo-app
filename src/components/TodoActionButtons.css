@@ -18,3 +18,11 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
+@media screen and (max-width: 820px) {
+  .delete-btn {
+    width: 17px;
+    height: 17px;
+    margin-top: 0.5rem;
+  }
+}
