@@ -2,7 +2,7 @@ import * as React from 'react';
 import Button from './Button';
 import { Task } from '../App';
 import { TodoContext } from '../contexts/TodoContext';
-import { TodoContextType } from "../App";
+import { TodoContextType } from '../contexts/TodoContext';
 
 import "./AddTodo.css";
 

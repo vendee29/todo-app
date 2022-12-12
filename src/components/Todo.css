@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    padding-bottom: 0.2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.066);
 }
 

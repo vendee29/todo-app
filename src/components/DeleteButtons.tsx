@@ -1,14 +1,19 @@
 import React from 'react';
 import Button from './Button';
+import { TodoContext } from '../contexts/TodoContext';
+import { TodoContextType } from '../contexts/TodoContext';
+
 import "./DeleteButtons";
 
-const DeleteButtons = () => {
+const DeleteButtons = (props: {onDelete: (text: string) => void }) => {
+  // const { todos, setTodos } = React.useContext(TodoContext) as TodoContextType;
+
   const deleteDoneTasksHandler = () => {
-    console.log('clicked done')
+    props.onDelete('done-tasks');
   }
 
   const deleteTasksHandler = () => {
-    console.log('clicked all')
+    props.onDelete('all-tasks');
   }
 
   return (

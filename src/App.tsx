@@ -17,11 +17,6 @@ export class Task {
   }
 }
 
-export type TodoContextType = {
-  todos: Task[];
-  setTodos: (todos: Task[]) => void;
-};
-
 const tasks: Task[] = [
   new Task(1, "Buy milk"),
   new Task(2, "Feed the monkey"),
@@ -31,6 +26,14 @@ const tasks: Task[] = [
 const App = () => {
   const [todos, setTodos] = React.useState<Task[]>(tasks);
 
+  const deleteHandler = (text: string) => {
+    if(text === 'all-tasks') {
+      setTodos([]);
+    } else if(text === 'done-tasks') {
+      console.log(text)
+    }
+  }
+
   return (
     <div className="App">
       <h1>ToDo App</h1>
@@ -38,7 +41,7 @@ const App = () => {
         <AddTodo/>
         <TodoList/>
       </TodoContext.Provider>
-      <DeleteButtons/>
+      <DeleteButtons onDelete={deleteHandler}/>
     </div>
   );
 };
