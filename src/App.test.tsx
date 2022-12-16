@@ -2,8 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+describe('App rendering tests', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+  test('renders heading', () => {
+    const heading: HTMLHeadingElement = screen.getByText(/ToDo App/i);
+    expect(heading).toBeInTheDocument();
+  });
+})
+
