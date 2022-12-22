@@ -6,7 +6,7 @@ describe('AddTodo component', () => {
 
     test('renders the submit button', () => {
         render(<AddTodo/>);
-        const button: HTMLButtonElement = screen.getByRole('button');
+        const button: HTMLElement = screen.getByRole('button');
         expect(button).toBeInTheDocument();
     })
 })
