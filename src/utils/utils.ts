@@ -7,7 +7,7 @@ export const removeDoneTodos = (todos: Task[], doneTodos: Task[]) => {
 };
 
 export const doesArrContainTask = (arr: Task[], task: Task) => {
-  const filtered = arr.filter((todo) => todo.value === task.value);
+  const filtered = arr.filter((todo) => todo.id === task.id);
   if (filtered.length === 0) return false;
   return true;
 };
