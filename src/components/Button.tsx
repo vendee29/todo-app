@@ -3,11 +3,11 @@ import "./Button.css";
 
 interface Props {
   text: string;
-  onClick: (event: any) => void;
+  onClick: (event: React.MouseEvent) => void;
 }
 
 const Button = (props: Props): JSX.Element => {
-  const clickHandler = (event: any) => {
+  const clickHandler = (event: React.MouseEvent) => {
     props.onClick(event);
   };
 

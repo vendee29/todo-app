@@ -9,7 +9,7 @@ const AddTodo = (): JSX.Element => {
 
   const [enteredTodo, setEnteredTodo] = React.useState("");
 
-  const submitHandler = (event: any) => {
+  const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (enteredTodo.trim().length === 0) return;
@@ -20,11 +20,10 @@ const AddTodo = (): JSX.Element => {
       done: false,
     };
     setTodos([...todos, newTodo]);
-    // setTodos((prevTodos: Task[]) => [...prevTodos, newTodo]);
     setEnteredTodo("");
   };
 
-  const inputHandler = (event: any) => {
+  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredTodo(event.target.value);
   };
 
