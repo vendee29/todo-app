@@ -18,7 +18,6 @@ const Todo = (props: Props): JSX.Element => {
   };
 
   const deleteHandler = () => {
-    
     props.onDelete(props.id);
   };
 

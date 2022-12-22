@@ -8,7 +8,6 @@ interface Props {
 }
 
 const DeleteButtons = (props: Props) => {
-  
   const deleteDoneTasksHandler = () => {
     props.onDelete("done-tasks");
   };

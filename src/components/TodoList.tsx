@@ -23,10 +23,9 @@ const TodoList = (props: Props): JSX.Element => {
       );
       setDoneTodos(filteredDoneTodos);
       props.onChange(filteredDoneTodos);
-
     } else {
       const doneTask = todos.filter(
-        (todo) => (todo.value === todoValue) && (isChecked)
+        (todo) => todo.value === todoValue && isChecked
       );
       if (doneTask.length === 0) return;
 
