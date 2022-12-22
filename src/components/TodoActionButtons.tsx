@@ -17,7 +17,8 @@ const TodoActionButtons = (props: Props) => {
 
   return (
     <div className="todo-action-btns">
-      <input type="checkbox" onChange={checkboxHandler} />
+      <label htmlFor="checkbox"></label>
+      <input type="checkbox" id="checkbox" onChange={checkboxHandler} />
       <div onClick={deleteTaskHandler} className="delete-btn"></div>
     </div>
   );
