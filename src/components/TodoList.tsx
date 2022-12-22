@@ -15,8 +15,6 @@ const TodoList = (props: Props): JSX.Element => {
   const [doneTodos, setDoneTodos] = React.useState<Task[]>([]);
 
   const checkTodoHandler = (todoValue: string, isChecked: boolean) => {
-    console.log(isChecked, todoValue)
-    
     if (!isChecked) {
       if (doneTodos.length === 0) return;
 
@@ -25,6 +23,7 @@ const TodoList = (props: Props): JSX.Element => {
       );
       setDoneTodos(filteredDoneTodos);
       props.onChange(filteredDoneTodos);
+
     } else {
       const doneTask = todos.filter(
         (todo) => (todo.value === todoValue) && (isChecked)
@@ -39,7 +38,6 @@ const TodoList = (props: Props): JSX.Element => {
   };
 
   const deleteTodoHandler = (id: number) => {
-    console.log(id)
     const todosWithoutDeleted: Task[] = todos.filter((todo) => todo.id !== id);
     setTodos(todosWithoutDeleted);
   };
